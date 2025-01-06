@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BsPerson } from 'react-icons/bs';
 import { Link } from "react-router-dom";
 
 
@@ -30,11 +29,10 @@ const HomePage = () => {
   return (
     <div>
      <h1 className='text-3xl font-bold underline text-center'>All Users</h1>
-       <div className='grid grid-cols-1 md:grid-cols-4 p-6' >
+       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-6 space-y-2 ' >
         {users.map((user)=>(
-          <div key={user.id} className=''>
-             <BsPerson className='h-6 w-6 ' />
-             <p className='font-bold items-center '>{user.name}</p>
+          <div key={user.id} className='text-center shadow-md'>
+             <p className='font-bold  '>{user.name}</p>
          <Link to={`/user/${user.id}`}>
          <button
           type="submit"

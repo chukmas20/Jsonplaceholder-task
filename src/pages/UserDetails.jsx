@@ -22,7 +22,7 @@ const UserDetails = () => {
       });
   }, [id]);
 
-  if (loading) return <p className="text-center font-bold text-1xl">Loading user details...</p>;
+  if (loading) return <p className="text-center font-bold text-2xl ">Loading user details...</p>;
   if (error) return <p>{error}</p>;
   if (!user) return <p>User not found</p>;
   return (
